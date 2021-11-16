@@ -2,12 +2,25 @@
 
 buildscript {
     repositories {
+        maven {  url 'http://10.53.131.102:8081/repository/maven-public' }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+
+
+
+
         jcenter()
+
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.2.0'
 
-        classpath 'com.novoda:bintray-release:0.3.4'
+//        classpath 'com.novoda:bintray-release:0.5.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -15,6 +28,17 @@ buildscript {
 
 allprojects {
     repositories {
+
+        maven {  url 'http://10.53.131.102:8081/repository/maven-public' }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+
+
+
         jcenter()
     }
 }
@@ -27,4 +51,4 @@ tasks.withType(Javadoc) {
     options.addStringOption('encoding', 'UTF-8')
 }
 
-tasks.getByPath(":library:mavenAndroidJavadocs").enabled = false
+//tasks.getByPath(":library:mavenAndroidJavadocs").enabled = false
